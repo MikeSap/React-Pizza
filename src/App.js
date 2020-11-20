@@ -8,7 +8,8 @@ class App extends Component {
     super()
     
     this.state = {
-      pizzas: []
+      pizzas: [],
+      // editPizza: {}
     }
   }
   componentDidMount(){
@@ -19,12 +20,25 @@ class App extends Component {
     }))
   }
 
+  popEditForm = (pizza) => {
+    this.setState({editPizza: pizza})
+  }
+
+  editPizza = (e) => {
+    debugger
+  }
+
   render() {
     return (
       <Fragment>
         <Header/>
-        <PizzaForm/>
-        <PizzaList pizzas={this.state.pizzas}/>
+        <PizzaForm
+        pizza={this.state.editPizza} 
+        editPizza={this.editPizza}
+         />
+        <PizzaList pizzas={this.state.pizzas} 
+        popEditForm={this.popEditForm}
+        />
       </Fragment>
     );
   }

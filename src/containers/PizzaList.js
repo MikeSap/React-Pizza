@@ -4,6 +4,7 @@ class PizzaList extends Component {
 
   renderPizzas = () => {
     return this.props.pizzas.map(pizza => <Pizza 
+     popEditForm={this.props.popEditForm}
      key={pizza.id}
      pizza={pizza} />)  
   }
