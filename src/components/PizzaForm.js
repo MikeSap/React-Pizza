@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 const PizzaForm = (props) => {
 
   const [pizza, setPizza] = useState({...props.pizza})
-  // HOW DO I CLEAR FORM AFTER SUBMIT?
+  // HOW DO I CLEAR FORM AFTER SUBMIT? NEED TO CHANGE THIS PROP PIZZA BEING SENT BACK AFTER PATCH
   let { size, topping, vegetarian} = pizza  
 
   const handleChange = (e) => {
@@ -37,11 +37,12 @@ const PizzaForm = (props) => {
       setPizza(props.pizza)
     }
     }, [props])
+    
     // HOW DO I CLEAR THE FORM AFTER SUBMIT?!?!?
-    // const clearForm = () => {
-    //   debugger
-    //   setPizza({setPizza({id:"", topping:"", size:"", vegetarian:""})
-    // }
+    const clearForm = () => {
+      debugger
+      setPizza({id:"", topping:"", size:"", vegetarian:""})
+    }
 
   return(
       <div className="form-row">
@@ -83,7 +84,7 @@ const PizzaForm = (props) => {
           <button type="submit" className="btn btn-success" onClick={() => {
             props.editPizza(pizza)
             // HOW DO I CLEAR THIS FORM???
-            // clearForm()
+            clearForm()
             }
             }>Submit</button>
         </div>

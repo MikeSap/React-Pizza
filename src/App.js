@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useEffect } from 'react';
 import Header from './components/Header'
 import PizzaForm from './components/PizzaForm'
 import PizzaList from './containers/PizzaList'
@@ -19,13 +19,6 @@ class App extends Component {
       pizzas: pizzas
     }))
   } 
-  
-  // componentDidUpdate(prevState){
-    // debugger
-    // if (prevState.pizzas !== this.state.pizzas){
-      // debugger
-    // }
-  // }
 
   popEditForm = (pizza) => {
     this.setState({editPizza: pizza})
@@ -49,8 +42,9 @@ class App extends Component {
           })
       })
     })
+    // set editPizza to {} here??
+    debugger
   }
-
 
   render() {
     return (
