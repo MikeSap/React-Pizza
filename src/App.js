@@ -24,7 +24,7 @@ class App extends Component {
     this.setState({editPizza: pizza})
   }
 
-  editPizza = (e) => {
+  editPizza = (pizza) => {
     debugger
   }
 
