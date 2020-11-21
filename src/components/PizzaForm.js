@@ -4,7 +4,7 @@ const PizzaForm = (props) => {
 
   const [pizza, setPizza] = useState({})
 
-  let { id, size, topping, vegetarian} = pizza  
+  let { size, topping, vegetarian} = pizza  
 
   const handleChange = (e) => {
     e.persist()

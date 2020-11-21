@@ -9,7 +9,7 @@ class App extends Component {
     
     this.state = {
       pizzas: [],
-      // editPizza: {}
+      editPizza: {}
     }
   }
   componentDidMount(){
@@ -25,8 +25,25 @@ class App extends Component {
   }
 
   editPizza = (pizza) => {
-    debugger
-  }
+    fetch(`http://localhost:3000/pizzas/${pizza.id}`, {
+      method: 'PATCH',
+      headers: {
+        Accept: "application/json",
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify(pizza)
+    })
+    .then(resp => resp.json())
+    .then(editedPizza => {
+      const updatedPizzas = [...this.state.pizzas]
+      this.setState({
+        pizzas:  updatedPizzas.map(pizza => {
+          return pizza.id === editedPizza.id ? {...pizza, ...editedPizza} : pizza
+          })
+      })
+    })
+  }   
+
 
   render() {
     return (
@@ -36,7 +53,8 @@ class App extends Component {
         pizza={this.state.editPizza} 
         editPizza={this.editPizza}
          />
-        <PizzaList pizzas={this.state.pizzas} 
+        <PizzaList 
+        pizzas={this.state.pizzas} 
         popEditForm={this.popEditForm}
         />
       </Fragment>
