@@ -18,7 +18,14 @@ class App extends Component {
     .then(pizzas => this.setState({
       pizzas: pizzas
     }))
-  }
+  } 
+  
+  // componentDidUpdate(prevState){
+    // debugger
+    // if (prevState.pizzas !== this.state.pizzas){
+      // debugger
+    // }
+  // }
 
   popEditForm = (pizza) => {
     this.setState({editPizza: pizza})
@@ -42,7 +49,7 @@ class App extends Component {
           })
       })
     })
-  }   
+  }
 
 
   render() {

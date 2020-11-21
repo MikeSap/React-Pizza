@@ -9,7 +9,7 @@
     {
       "id": 2,
       "topping": "Veggie Pepperoni",
-      "size": "Medium",
+      "size": "Large",
       "vegetarian": true
     },
     {
@@ -26,14 +26,14 @@
     },
     {
       "id": 5,
-      "topping": "Bacon",
-      "size": "Small",
-      "vegetarian": false
+      "topping": "BBQ Tempeh Bacon",
+      "size": "Large",
+      "vegetarian": true
     },
     {
       "id": 6,
       "topping": "Spinach",
-      "size": "Medium",
+      "size": "Small",
       "vegetarian": true
     },
     {
@@ -50,14 +50,14 @@
     },
     {
       "id": 9,
-      "topping": "Seitan Salami",
+      "topping": "Veggie Pepperoni",
       "size": "Medium",
       "vegetarian": true
     },
     {
       "id": 10,
       "topping": "Seitan Chicken",
-      "size": "Large",
+      "size": "Medium",
       "vegetarian": true
     }
   ]
