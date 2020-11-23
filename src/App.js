@@ -12,6 +12,8 @@ class App extends Component {
       editPizza: {}
     }
   }
+
+  
   componentDidMount(){
     fetch('http://localhost:3000/pizzas')
     .then(resp => resp.json())
@@ -39,12 +41,16 @@ class App extends Component {
       this.setState({
         pizzas:  updatedPizzas.map(pizza => {
           return pizza.id === editedPizza.id ? {...pizza, ...editedPizza} : pizza
-          })
+          }),
+          editPizza: {}
       })
     })
-    // set editPizza to {} here??
     debugger
   }
+
+  // componentDidUpdate(){
+  //   debugger
+  // }
 
   render() {
     return (
