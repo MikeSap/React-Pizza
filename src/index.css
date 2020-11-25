@@ -2,3 +2,8 @@
   width: auto%;
   margin:  1%;
 }
+
+.container{
+  width: 25vw;
+  float: right;
+}

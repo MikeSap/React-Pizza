@@ -27,7 +27,7 @@ const PizzaForm = (props) => {
     
 
   return(
-      <div>
+      <div className="container">
         <form onSubmit={() => {props.editPizza(pizza)}}>
         <div className="form-group">          
             <input onChange={handleChange} name="topping" type="text" className="form-control" placeholder="Pizza Topping" value={topping}/>
@@ -42,9 +42,7 @@ const PizzaForm = (props) => {
         <div>
           <div className="form-row">
             <input onChange={handleChange} name="vegetarian" className="form-check" type="checkbox" defaultChecked={vegetarian}/>
-            <label className="form-check-label">
-              Vegetarian
-            </label>
+            <label className="form-check-label">Vegetarian</label>
           </div>
         </div>
         <div className="form-row">

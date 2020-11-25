@@ -3,7 +3,7 @@
     {
       "id": 1,
       "topping": "Plain",
-      "size": "Small",
+      "size": "Large",
       "vegetarian": true
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": 10,
       "topping": "Seitan Chicken",
-      "size": "Medium",
+      "size": "Large",
       "vegetarian": true
     }
   ]
