@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useEffect } from 'react';
+import React, { Component, Fragment } from 'react';
 import Header from './components/Header'
 import PizzaForm from './components/PizzaForm'
 import PizzaList from './containers/PizzaList'
@@ -45,12 +45,7 @@ class App extends Component {
           editPizza: {}
       })
     })
-    debugger
   }
-
-  // componentDidUpdate(){
-  //   debugger
-  // }
 
   render() {
     return (

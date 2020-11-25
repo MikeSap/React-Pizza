@@ -3,7 +3,7 @@
     {
       "id": 1,
       "topping": "Plain",
-      "size": "Large",
+      "size": "Small",
       "vegetarian": true
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": 3,
       "topping": "Mushroom",
-      "size": "Small",
+      "size": "Large",
       "vegetarian": true
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": 6,
       "topping": "Spinach",
-      "size": "Small",
+      "size": "Large",
       "vegetarian": true
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": 9,
       "topping": "Veggie Pepperoni",
-      "size": "Medium",
+      "size": "Large",
       "vegetarian": true
     },
     {
